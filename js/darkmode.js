@@ -9,7 +9,9 @@ function uncheck_the_toggle() {
 function fall_into_darkness() {
     document.getElementsByTagName("BODY")[0].setAttribute("style", "background-color: #222;");
     document.getElementById("page").setAttribute("style", "background-color: black; color: white;");
-    document.getElementById("commentform").setAttribute("style", "background-color: #ccc;")
+    if (document.getElementById("commentform")) {
+        document.getElementById("commentform").setAttribute("style", "background-color: #ccc;")
+    }
     var items = document.getElementsByClassName("menu-item")
     for (var i = 0; i < items.length; i++) {
         items[i].setAttribute("style", "background-color: black; color: white;");
@@ -22,7 +24,9 @@ function fall_into_darkness() {
 function rise_from_darkness() {
     document.getElementsByTagName("BODY")[0].removeAttribute("style", "background-color: #222;");
     document.getElementById("page").removeAttribute("style", "background-color: black; color: white;");
-    document.getElementById("commentform").removeAttribute("style", "background-color: #ccc;")
+    if (document.getElementById("commentform")) {
+        document.getElementById("commentform").removeAttribute("style", "background-color: #ccc;")
+    }
     var items = document.getElementsByClassName("menu-item")
     for (var i = 0; i < items.length; i++) {
         items[i].removeAttribute("style", "background-color: black; color: white;");
