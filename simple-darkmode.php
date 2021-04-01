@@ -15,7 +15,7 @@ add_action('get_header','add_darkness');
 function add_darkness() {
     // add the css
     wp_enqueue_style('simple_darkmode_style', plugins_url( 'css/darkness_style.css', __FILE__ ));
-    wp_enqueue_style('fontawesome', 'https://use.fontawesome.com/releases/v5.6.3/css/all.css');
+    wp_enqueue_style('fontawesome', plugins_url( 'css/all.min.css', __FILE__ ));
     wp_enqueue_script('simple_darkmode_script', plugins_url( 'js/darkmode.js', __FILE__ ));
 }
 
